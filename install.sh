@@ -69,7 +69,8 @@ check_dependencies() {
 # Install Panel
 install_panel() {
     echo -e "${GREEN}Installing Panel...${NC}"
-    cd PanelAneba
+    cd ..
+    cd panel
     npm install
     npm run seed
 
