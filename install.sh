@@ -46,7 +46,6 @@ echo -e "${YELLOW}Detected OS: $DISTRO${NC}"
 
 # Check Dependencies
 check_dependencies() {
-    cd ..
     echo -e "${GREEN}Checking Dependencies...${NC}"
 
     if ! command -v git &>/dev/null; then
@@ -70,6 +69,7 @@ check_dependencies() {
 # Install Panel
 install_panel() {
     echo -e "${GREEN}Installing Panel...${NC}"
+    cd ..
     cd panel
     npm install
     npm run seed
